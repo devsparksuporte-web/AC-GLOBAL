@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/ac-logo.svg" />
+  <link rel="manifest" href="/manifest.json?v=2" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AC Global">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="/ac-logo.svg">
+  <meta name="theme-color" content="#2563eb">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' http://localhost:* ws://localhost:* wss://localhost:*; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: http://localhost:*; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com http://fonts.googleapis.com http://localhost:*; connect-src 'self' https://*.supabase.co wss://*.supabase.co http://localhost:* ws://localhost:* wss://localhost:*; img-src 'self' data: https: http://localhost:*; font-src 'self' data: https: http: http://localhost:*;">
+  <title>AC Global - Suporte Técnico</title>
+  <script>
+    console.log('HTML loaded, starting script...');
+
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered:', registration))
+          .catch(error => console.log('SW registration failed:', error));
+      });
+    }
+
+    window.onerror = function (msg, url, line, col, error) {
+      console.error('GLOBAL ERROR:', msg, 'at', url, ':', line, ':', col, error);
+      return false;
+    };
+    window.onunhandledrejection = function (event) {
+      console.error('UNHANDLED REJECTION:', event.reason);
+    };
+  </script>
+</head>
+
+<body>
+  <div id="root">
+    <div
+      style="display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; color: #64748b;">
+      Carregando sistema...
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
