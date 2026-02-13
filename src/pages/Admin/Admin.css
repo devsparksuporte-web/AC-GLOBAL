@@ -1,0 +1,193 @@
+.admin-page {
+    padding: var(--spacing-4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-8);
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.admin-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-gray-900);
+    letter-spacing: -0.025em;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--color-gray-100);
+    padding: 0.4rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .admin-tabs {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: flex-start;
+        padding: 0.5rem var(--spacing-4);
+        background: transparent;
+        gap: var(--spacing-2);
+    }
+
+    .admin-tab {
+        padding: 0.6rem 1.25rem;
+        background: var(--color-gray-100);
+        flex-shrink: 0;
+    }
+}
+
+.admin-tab {
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+}
+
+.admin-tab:hover {
+    color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.05);
+}
+
+.admin-tab.active {
+    color: white;
+    background: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.admin-table-container {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-gray-100);
+    overflow: hidden;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background: var(--color-gray-50);
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-500);
+    border-bottom: 2px solid var(--color-gray-100);
+}
+
+.data-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-gray-50);
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.data-table tr:hover td {
+    background: rgba(var(--color-primary-rgb), 0.01);
+}
+
+.role-badge {
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.role-super_admin {
+    background: #fae8ff;
+    color: #7e22ce;
+    border: 1px solid #f0abfc;
+}
+
+.role-admin {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.role-tecnico {
+    background: #dbeafe;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.role-cliente {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+.badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.badge-danger {
+    background: #fff1f2;
+    color: #e11d48;
+}
+
+.btn-icon-danger {
+    color: var(--color-gray-400);
+    transition: all 0.2s;
+}
+
+.btn-icon-danger:hover {
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+.empty-state {
+    padding: var(--spacing-12);
+    text-align: center;
+    color: var(--color-gray-400);
+}
+
+/* Forçar estilo do modal se necessário */
+.admin-page .modal-overlay {
+    z-index: 9999 !important;
+}

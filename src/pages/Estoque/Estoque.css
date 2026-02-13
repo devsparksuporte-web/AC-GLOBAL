@@ -1,0 +1,150 @@
+.estoque-page {
+    padding: 2rem;
+}
+
+.estoque-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.estoque-card {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.estoque-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    border-color: #e2e8f0;
+}
+
+.estoque-card.low-stock {
+    background: linear-gradient(to bottom right, #ffffff, #fffafa);
+}
+
+.status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.status-badge.low-stock {
+    background: #fef2f2;
+    color: #ef4444;
+    border: 1px solid #fee2e2;
+}
+
+.item-header {
+    margin-bottom: 0.5rem;
+}
+
+.item-info h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+
+.item-info p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.stats-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.stat .label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.stat .value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.2;
+}
+
+.stat.highlight .value {
+    color: #2563eb;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+.tipo-switch {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 4px;
+}
+
+.tipo-switch button {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tipo-switch button.active {
+    background: white;
+    color: #2563eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}

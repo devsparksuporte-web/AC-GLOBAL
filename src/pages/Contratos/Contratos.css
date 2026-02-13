@@ -1,0 +1,53 @@
+.contratos-page {
+    padding: 0;
+}
+
+.contratos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.contratos-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-gray-800);
+}
+
+.contrato-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-4);
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-base);
+}
+
+.contrato-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+}
+
+.badge-ativo {
+    background: #dcfce7;
+    color: #166534;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-inativo {
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.contrato-actions {
+    display: flex;
+    gap: var(--spacing-2);
+}

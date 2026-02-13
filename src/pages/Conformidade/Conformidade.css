@@ -1,0 +1,129 @@
+.conformidade-page {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.conformidade-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.conformidade-tab {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-gray-500);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.conformidade-tab.active {
+    color: var(--color-primary);
+}
+
+.conformidade-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Certificações */
+.cert-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-gray-200);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cert-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-gray-800);
+}
+
+.cert-info p {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+}
+
+.cert-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cert-status.ativo {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.cert-status.vencido {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.cert-status.alerta {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Riscos */
+.risco-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.risco-badge.warning {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.risco-badge.danger {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Checklists */
+.checklist-builder {
+    background: #f8fafc;
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    border: 1px dashed var(--color-gray-300);
+}
+
+.checklist-item-row {
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--color-gray-100);
+}

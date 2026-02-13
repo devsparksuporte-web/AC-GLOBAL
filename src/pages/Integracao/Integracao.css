@@ -1,0 +1,273 @@
+/* === Integração com Fabricantes e Fornecedores === */
+
+.integracao-page {
+    padding: 0;
+}
+
+/* Tabs */
+.integracao-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--color-gray-100);
+    padding: 0.35rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.integracao-tab {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all 0.25s ease;
+    background: transparent;
+}
+
+.integracao-tab:hover {
+    color: var(--color-primary);
+}
+
+.integracao-tab.active {
+    color: white;
+    background: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Warranty Card */
+.garantia-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-100);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+}
+
+.garantia-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.garantia-card.expiring {
+    border-left: 4px solid #f59e0b;
+}
+
+.garantia-card.expired {
+    border-left: 4px solid #ef4444;
+    opacity: 0.7;
+}
+
+.garantia-card.active {
+    border-left: 4px solid #22c55e;
+}
+
+.garantia-info h4 {
+    font-weight: 700;
+    color: var(--color-gray-800);
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.garantia-info p {
+    font-size: 0.82rem;
+    color: var(--color-gray-500);
+}
+
+.garantia-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.garantia-badge.ativa {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.garantia-badge.vencida {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.garantia-badge.utilizada {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Quote comparison */
+.cotacao-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-100);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.cotacao-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.cotacao-status {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cotacao-status.aberta {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.cotacao-status.em_analise {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.cotacao-status.finalizada {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.cotacao-status.cancelada {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Order tracking */
+.pedido-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-100);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.pedido-status {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pedido-status.pendente {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.pedido-status.confirmado {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.pedido-status.em_transito {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.pedido-status.entregue {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pedido-status.cancelado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Timeline tracker */
+.tracking-timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 1rem 0;
+}
+
+.tracking-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.tracking-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.tracking-dot.completed {
+    background: #22c55e;
+    color: white;
+}
+
+.tracking-dot.current {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
+}
+
+.tracking-dot.pending {
+    background: var(--color-gray-200);
+    color: var(--color-gray-400);
+}
+
+.tracking-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    margin-top: 0.4rem;
+    text-align: center;
+}
+
+.tracking-line {
+    height: 3px;
+    flex: 1;
+    margin-top: -14px;
+}
+
+.tracking-line.completed {
+    background: #22c55e;
+}
+
+.tracking-line.pending {
+    background: var(--color-gray-200);
+}
+
+/* Items inline form */
+.item-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.item-row input {
+    flex: 1;
+}

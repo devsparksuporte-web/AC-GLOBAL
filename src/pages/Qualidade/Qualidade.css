@@ -1,0 +1,225 @@
+/* === Gestão de Qualidade === */
+
+.quality-page {
+    padding: 0;
+}
+
+/* Tabs */
+.quality-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--color-gray-100);
+    padding: 0.35rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.quality-tab {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all 0.25s ease;
+    background: transparent;
+}
+
+.quality-tab:hover {
+    color: var(--color-primary);
+}
+
+.quality-tab.active {
+    color: white;
+    background: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Metric Cards */
+.quality-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.quality-metric-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 1.25rem;
+    border: 1px solid var(--color-gray-100);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quality-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.quality-metric-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.quality-metric-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-gray-800);
+    letter-spacing: -0.025em;
+}
+
+.quality-metric-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.quality-metric-value.green {
+    color: #16a34a;
+}
+
+.quality-metric-value.yellow {
+    color: #d97706;
+}
+
+.quality-metric-value.red {
+    color: #dc2626;
+}
+
+.quality-metric-value.blue {
+    color: #2563eb;
+}
+
+/* Checklist Card */
+.quality-checklist-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-100);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+}
+
+.quality-checklist-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.quality-checklist-title {
+    font-weight: 700;
+    color: var(--color-gray-800);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.quality-checklist-desc {
+    font-size: 0.85rem;
+    color: var(--color-gray-500);
+}
+
+.quality-checklist-items {
+    font-size: 0.78rem;
+    color: var(--color-gray-400);
+    margin-top: 0.5rem;
+}
+
+.quality-checklist-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+/* Audit Badge */
+.audit-status {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.audit-status.pendente {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.audit-status.aprovado {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.audit-status.reprovado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.audit-status.observacao {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Fill Checklist */
+.quality-fill-item {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--color-gray-50);
+}
+
+.quality-fill-item:last-child {
+    border-bottom: none;
+}
+
+.quality-fill-question {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.quality-fill-options {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.quality-fill-option {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--color-gray-100);
+    color: var(--color-gray-600);
+    transition: all 0.2s;
+}
+
+.quality-fill-option.selected {
+    background: var(--color-primary);
+    color: white;
+}
+
+.quality-fill-option:hover:not(.selected) {
+    background: var(--color-gray-200);
+}
+
+/* Stars */
+.quality-stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.quality-star {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.quality-star:hover {
+    transform: scale(1.2);
+}

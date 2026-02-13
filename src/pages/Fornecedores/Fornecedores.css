@@ -1,0 +1,70 @@
+/* Estilos específicos para Fornecedores */
+
+.details-section {
+    border: 1px solid #e2e8f0;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pendente {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-enviado {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-recebido {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-cancelado {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.shadow-premium {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+
+    .sidebar,
+    .page-header,
+    .btn-primary,
+    .btn-icon,
+    .modal-overlay {
+        display: none !important;
+    }
+
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .details-section {
+        box-shadow: none !important;
+        border: none !important;
+    }
+}

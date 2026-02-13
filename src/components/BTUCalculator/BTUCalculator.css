@@ -1,0 +1,144 @@
+.btu-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.btu-modal-content {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btu-header {
+    background: #2563eb;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btu-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btu-body {
+    padding: 1.5rem;
+}
+
+.btu-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.btu-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.btu-form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.radio-btn {
+    flex: 1;
+    padding: 0.625rem;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.radio-btn.active {
+    background: #dbeafe;
+    border-color: #2563eb;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.btu-result-card {
+    margin-top: 2rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.result-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #0369a1;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0c4a6e;
+    margin-bottom: 0.75rem;
+}
+
+.result-suggestion {
+    font-size: 0.95rem;
+    color: #075985;
+}
+
+.btu-footer {
+    padding: 1rem 1.5rem;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-align: center;
+}

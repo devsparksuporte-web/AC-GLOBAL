@@ -1,0 +1,24 @@
+{
+    "short_name": "AC Global",
+    "name": "AC Global - Suporte Técnico",
+    "description": "Sistema de Gestão e Suporte Técnico para Ar Condicionado",
+    "icons": [
+        {
+            "src": "ac-logo.svg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "ac-logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "any",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#2563eb",
+    "background_color": "#ffffff",
+    "scope": "/"
+}

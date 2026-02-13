@@ -1,0 +1,211 @@
+.relatorios-page {
+    padding: 0;
+}
+
+.page-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-gray-800);
+}
+
+/* Summary Stats */
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+}
+
+.stat-box {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.stat-box-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+}
+
+.stat-box-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-gray-800);
+    background: var(--color-primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+.report-card {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.report-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-100);
+    color: var(--color-primary);
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-gray-800);
+    margin: 0;
+}
+
+/* Charts & Lists */
+.chart-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.chart-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-gray-700);
+}
+
+.progress-bar-bg {
+    height: 8px;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+}
+
+.progress-bar-fill.instalacao {
+    background: #3b82f6;
+}
+
+.progress-bar-fill.manutencao {
+    background: #22c55e;
+}
+
+.progress-bar-fill.reparo {
+    background: #f59e0b;
+}
+
+.progress-bar-fill.limpeza {
+    background: #a855f7;
+}
+
+/* Financial Chart (Visualização de Barras) */
+.financial-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 250px;
+    padding-top: var(--spacing-8);
+    gap: var(--spacing-4);
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+    flex: 1;
+}
+
+.bar-column {
+    width: 40px;
+    background: var(--color-primary-gradient);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: height 1s ease-out;
+    min-height: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar-column:hover {
+    opacity: 0.9;
+    transform: scaleX(1.1);
+}
+
+.bar-tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-gray-800);
+    color: white;
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: var(--shadow-sm);
+}
+
+.bar-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0;
+    border-style: solid;
+    border-color: var(--color-gray-800) transparent transparent;
+}
+
+.bar-column:hover .bar-tooltip {
+    opacity: 1;
+    top: -40px;
+}
+
+.bar-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    font-weight: 500;
+}
